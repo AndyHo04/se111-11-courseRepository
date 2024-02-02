@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 4 Harry Potter Website">
+    <meta name="author" content="Andy Ho">
+
+    <title>Harry Potter and The Deathly Hallows 2</title>
+
+    <!------Date:2/1/24------------>
+
+    <style>
+        div {
+            padding:10px;
+            margin:5px;
+         }
+        .image-wrapper {
+            border: none;
+            display: flex;
+            justify-content: center;
+            
+        }
+        body {
+            background-color: rgb(239,238,233);
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 80px;
+            text-align: center;
+
+        }
+
+        h2 {
+            text-align: center;
+
+        }
+        p{
+            text-align: center;
+            
+        }
+
+        .link {
+            width:130px;
+            height:50px;
+            margin-left:20px;
+            margin-right:20px;
+            text-decoration:none;
+            font-size:20px;
+            float:left;
+            text-align:center;
+            line-height:50px;
+            
+            
+            background-color: rgb(113,118,121);
+            color: white;
+
+            box-shadow: 0 0 8px black;
+
+            border-radius:30px;
+
+        }
+
+        .link:hover {
+           
+            background-image: url("images/harrypotter.jpeg");
+            color:rgb(0, 0, 0);
+            background-size: 150px;
+        }
+        
+    
+        
+
+        #container {
+            width: auto;
+            padding: 10px;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 15px;
+            color:white;
+            background-color:rgb(63, 36, 13);
+
+        }
+
+        #buttons {
+            width: 700px;
+            height: 50px;
+           
+            margin-left:383px;
+
+        }
+    
+
+        a {
+            text-decoration: none;
+            background-color: rgb(118, 123, 36);
+            color:white;
+        }
+
+        a:hover {
+            background-color:rgb(0, 0, 0);
+         }
+
+        a:visited {
+            color:white
+        }
+
+        #footer {
+            font-size:20px;
+            text-align: center;
+         }
+    </style>
+
+
+
+</head>
+<body>
+     <!---------MAIN CONTAINER for all content------>
+     <div id="container">
+        
+        <hr>
+        <!---------HEADER-------->
+        <div id="header">
+            <h1><em>Harry Potter and The Deathly Hallows Part 2</em></h1>
+
+        </div><!-----#header-->
+
+        <!----------NAV---------->
+        <div id="nav">
+            <div id="buttons">
+                <!-----relative file path---->
+                <a class="link" style="color:rgb(255, 40, 16);" href="Home.html"><b>HOME</b></a>
+                <a class="link" style="color:rgb(16, 199, 31);" href="cast.html"><b>CAST</b></a>
+                <a class="link" style="color:rgb(250, 177, 8);" href="review.html"><b>REVIEW</b></a>
+                <a class="link" style="color:rgb(113, 16, 181);" href="#footer"><b>FOOTER</b></a>
+
+            </div><!--------button div-->
+        </div><!------#nav----->
+
+       
+        <hr>
+        <!--------Page-content--->
+        <div id="content">
+            <h2>About the movie<em> Harry Potter and The Deathly Hallows Part 2</em> (2011)</h2>
+            <p>A brief synopsis of the movie<em> Harry Potter and The Deathly Hallows Part 2:</em> The Wizarding World is now in war as Harry Potter, Ron Weasley, and Hermione Granger try to find the Horcruxes to help the Wizarding world defeat Voldertmort and his army of Death Eaters.</p>
+            <div class="image-wrapper">
+            <img src="../W4MOVIE/images/harrypotter_main.jpg" alt="official Harry Potter and The Deathly Hallows Part 2 Poster" height="1000" width="800">
+            </div><!-----image wrapper-->
+            <br>
+            <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5NYt1qirBWg?si=SfttFBiszM0MmOnF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div><!----iframe div-->
+            <div class="info" >
+                <p><b>Company Credit:</b> Warner Bros. Pictures Heyday Films</p>
+                <p><b>Release Date:</b> July 2011</p>
+                <p><b>Genres:</b> Fantasy Fiction, Thriller</p>
+                <p><b>Rating:</b> PG-13</p>
+                <p><b>Running Time:</b> 2 hours and 26 minutes</p>
+                
+            </div><!-----/.class---->
+            
+
+
+        </div><!-----#content----->
+
+        <hr>
+        <!-----------Footer-------->
+        <div id="footer">
+            <!--------1-page jump link:jumps to a specific element based on id-->
+             <a  href="#header">Back to top of page</a>
+
+              <p>&copy 2024 | A Ho | SE111 |  202420</p>
+
+             <!--
+            <img src="images/______" alt="validation of HOME page" width="100">
+
+            -->
+        </div><!----#footer-->
+
+
+    </div><!-----container div-->
+
+
+</body>
+</html>
