@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5 | Tables & Forms</title>
+    
+    <style>
+        table, td{
+            /*styling to show the borders of the tables*/
+            border:1px solid black;
+        }
+     </style>
+
+</head>
+<body>
+    <h1>Form with a table</h1>
+
+    <!---when working with tables & forms, put the table INSIDE the form-->
+    <!-----work row-by-row and have a plan before starting your code-->
+    <form method="GET" action=""> 
+        <table>
+
+            <!-----TABLE HEAD---->
+            <thead>
+                <!-------column HEADERS - must use <b>/<h8> if you want them to bold-->
+                    <!----table row: one row of data, populated with <td>---->
+                    <!----MAKE SURE EVERY ROW HAS THE SAME NUMBER OF <TD>!!!-->
+                    <tr>
+                        <!----LABEL---->
+                        <!---make sure the for matches input's id & name (almost always)-->
+                        <!---NEW ROW-->
+                        <td>
+
+                           <h2>Label</h2>
+
+                        </td>
+                        <!---INPUT-->
+                        <td>
+                            <h2>INPUT</h2>
+
+                         </td>
+
+                    </tr>
+            </thead>
+           
+            <!----TABLE BODY-->
+            <tbody>
+               
+                <tr>
+                <!---NEW ROW-->
+                    <!----LABEL---->
+                    <!---make sure the for matches input's id & name (almost always)-->
+                   <td>
+
+                       <label for="fName">First Name:</label>
+
+                    </td>
+                    <!---INPUT-->
+                    <td>
+                        <input type="text" name="fName" id="fName">
+
+                    </td>
+                
+                </tr>
+               
+                <!---NEW ROW-->
+                <tr>
+                     <!----LABEL---->
+                    <!---make sure the for matches input's id & name (almost always)-->
+                    
+                    <td>
+
+                        <label for="lName">Last Name:</label>
+ 
+                     </td>
+                    
+                     <!---INPUT-->
+                     <td>
+                         <input type="text" name="lName" id="lName" placeholder="Dragon" maxlength="10" required> 
+ 
+                     </td>
+ 
+                 </tr>
+
+                <!---NEW ROW-->
+                <tr>
+                     <!----LABEL---->
+                    <!---make sure the for matches input's id & name (almost always)-->
+                    
+                    <td>
+
+                        <label for="age">Age:</label>
+ 
+                     </td>
+                    
+                     <!---INPUT-->
+                     <td>
+                         <input type="number" name="age" id="age" min="0" max="100"> 
+ 
+                     </td>
+ 
+                 </tr>
+                 
+                <!---NEW ROW-->
+                <tr>
+                    <!----LABEL---->
+                     <!---make sure the for matches input's id & name (almost always)-->
+               
+                    <td>
+
+                        <label for="comments">Comments:</label>
+
+                    </td>
+               
+                     <!---INPUT-->
+                    <td>
+                         <textarea id="comments" name="comments" rows="10" cols="20" placeholder="Leave your comment here..." style="font-family: Arial, Helvetica, sans-serif;"></textarea>
+                    </td>
+
+                </tr>
+
+
+                <!---NEW ROW-->
+                <tr>
+                    <!----LABEL---->
+                    <!---make sure the for matches input's id & name (almost always)-->
+           
+                    <td>
+
+                        <label for="FAVECOLOR">Pick Your<br> Favorite Color:</label>
+
+                    </td>
+           
+                    <!---INPUT-->
+                    <td>
+                        <!-----create drop down menu first-->
+                        <select name="faveColor" id="faveColor"> 
+                            <!---user is restricted to only selecting one option-->
+                            <option value="r" style="color: rgb(229, 54, 54);">Red</option>
+                            <option value="o" style="color: orange;">Orange</option>
+                            <option value="y">Yellow</option>
+                            <option value="g" style="color: green;">Green</option>
+                            <option value="b">Blue</option>
+                            <option value="i">Indigo</option>
+                            <option value="v">Violet</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+                 <!---NEW ROW-->
+                <tr>
+                    <!----LABEL---->
+                    <!---make sure the for matches input's id & name (almost always)-->
+               
+                    <td>
+
+                        <label for="study">Program of Study:</label>
+
+                    </td>
+               
+                    <!---INPUT-->
+                    <td>
+                        <input type="radio" name="study" value="SE">SOFTWARE ENGINEERING<br>
+                        <input type="radio" name="study" value="CBS">CYBERSECURITY & NETWORKING<br>
+                        <input type="radio" name="study" value="WD">WEB DEVELOPMENT<br>
+                    
+                    </td>
+
+                </tr>
+
+                <!---NEW ROW-->
+                <tr>
+                    <!----LABEL---->
+                     <!---make sure the for matches input's id & name (almost always)-->
+               
+                    <td>
+
+                        <label for="vehicle">Select your Vehicles:</label>
+
+                    </td>
+               
+                    <!---INPUT-->
+                    <td>
+                        <input type="checkbox" name="vehicle" value="car">Car<br>
+                        <input type="checkbox" name="vehicle" value="car">The Rocinante<br>
+                        <input type="checkbox" name="vehicle" value="car">Motorcycle<br>
+                        <input type="checkbox" name="vehicle" value="car">Roach the Horse<br>
+
+                    
+                    </td>
+
+                </tr>
+                
+                 <!---NEW ROW-->
+                 <tr>
+                    <!----LABEL---->
+                     <!---make sure the for matches input's id & name (almost always)-->
+               
+                    <td>
+
+                        <label for="Date">Date:</label>
+
+                    </td>
+               
+                    <!---INPUT-->
+                    <td>
+                        <input type="date" name="date" value="date">
+                        
+                    
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <!----LABEL---->
+                     <!---make sure the for matches input's id & name (almost always)-->
+               
+                    <td>
+
+                       
+                    </td>
+               
+                    <!---INPUT-->
+                    <td>
+                        
+                        <input type="submit"  value="SUBMIT">
+                        
+                    
+                    </td>
+
+                </tr>
+            </tbody>
+           
+            <!------TABLE FOOT-->
+            <tfoot>
+
+
+            </tfoot>
+
+        </table>
+
+     </form>
+
+
+
+</body>
+</html>
