@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 JS Demo</title>
+
+    <!-----In document styling---->
+    <style>
+        body{
+            background-color: grey;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!---We should have at least 1 HTML in the page before <script> tags-->
+    <h1>W6 | Introduction to Javascript Demo</h1>
+
+    <!----in document Javascript---->
+    <script>
+        //writing JS in here
+        // or /* how to comment in Javascript
+
+        // all variables must be declared before they can be defined and use
+        // we declare a variable using the keyword "let"
+
+        var name    // declare only, now browser what name is when seen
+        name = "KT" // defining the variable, assigning a value 
+
+        var name = "KT" // declare and define in one line
+
+        var num1 = 10
+        var num2= 7
+
+       
+        var sum = num1 + num2
+
+        //output ---------------------------
+        // cannot use num1 and num2 until they are both declared and defined
+        console.log(`Num1: ${num1} | Num2: ${num2} | Sum: ${sum}`) // ` != ''
+       //console.log only used for development/debugging
+
+       //alert() can be viewed/seened by a user visiting the page
+       //create a pop up window in the browser page, user must intercept with the alert() before any futher lines are read
+
+       alert(`Hi there, ${name}!`)
+
+       console.log(`passed the alert`)
+
+       //input---------------------------
+       //prompt() prompting the user with a message, a pop-up with text field input element is displayed - user enters data into field, Press ok to continue
+       var lname = prompt(`Hi again ${name}, Please enter your last name?`)
+
+       console.log(`Passed the prompt()`)
+      
+       console.log(`Last: ${lname}`) // for developer/debugging
+      
+       alert(`Last: ${lname}`)       // for user
+
+       //CAST PROMPT RETURNS TO ENSURE THEY ARE NUMBERS
+       var userNum = Number(prompt(`Enter a number: `))
+       //userNum = Number(userNum) - casting the string to a number
+       console.log(userNum.toFixed(2)) 
+
+       var tax = userNum * 0.20
+       
+       alert(`Your TAXES DUE: $${tax.toFixed(2)}`) 
+       console.log(`Your TAXES DUE: $${tax.toFixed(2)}`)
+    </script>
+</body>
+</html>
