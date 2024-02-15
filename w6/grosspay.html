@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 Javascript Gross Pay Calculator</title>
+    <style>
+     body{
+        background-color: grey;
+     }
+
+    </style>
+</head>
+<body>
+    <!---Heading-->
+    <h1>W6 Javascript Gross Pay Calculator</h1>
+    <script>
+        // prompt user for numbrs
+        var hourly_pay = Number(prompt(`Enter your Hourly Pay:`))
+        var hours_worked = Number(prompt(`Enter your Hours Worked:`))
+        
+        //create new values/do the math
+        var weeks_worked = hours_worked * 2
+        var grosspay = hourly_pay * hours_worked
+        var tax_amount = grosspay * 0.20
+        var netpay = grosspay - tax_amount
+
+        //final display to user and console
+        alert(`GROSS PAY: $${grosspay.toFixed(2)} \nUncle Sam's Share: $${tax_amount.toFixed(2)} \nNet Pay: $${netpay.toFixed(2)}`)
+        console.log(`Your GROSS PAY: $${grosspay.toFixed(2)} `)
+        console.log(`Your Uncle Sam's Share: $${tax_amount.toFixed(2)}`)
+        console.log(`Your Net Pay: $${netpay.toFixed(2)}`)
+     </script>
+     
+
+</body>
+</html>
