@@ -117,10 +117,13 @@
         var body = document.querySelector(`body`)
         body.style.backgroundColor = `grey`
         var h1 = document.querySelector(`h1`)
-        var input = document.querySelector(`input`)
+        var first = document.querySelector(`first`)
+        var last = document.querySelector(`last`)
+        var rate = document.querySelector(`rate`)
+        var hours = document.querySelector(`hours`)
         var div = document.querySelector(`div`)
         var inputButtons = document.querySelector(`#enter-button`)
-        console.log(body, h1, input, div, inputButtons)
+        console.log(body, h1, first, last, rate, hours, div, inputButtons)
         //PART2------adding event listeners------------------------
         /*
             add an event listener to the #enter-button that runs a function called "formData"
@@ -161,10 +164,10 @@
             /*
                 Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
             */
-            var first = document.getElementById(`first`).value
-            var last = document.getElementById(`last`).value
-            var rate = document.getElementById(`rate`).value
-            var hours = document.getElementById(`hours`).value
+            first = document.getElementById(`first`).value
+            last = document.getElementById(`last`).value
+            rate = document.getElementById(`rate`).value
+            hours = document.getElementById(`hours`).value
             var fullName = first + ` ` + last
             var grossPay = Number(rate * hours)
             var taxAmount = Number(grossPay * .20)
@@ -180,10 +183,10 @@
 
        function confirmData(event)
        {
-            var first = document.getElementById(`first`).value
-            var last = document.getElementById(`last`).value
-            var rate = document.getElementById(`rate`).value
-            var hours = document.getElementById(`hours`).value
+            first = document.getElementById(`first`).value
+            last = document.getElementById(`last`).value
+            rate = document.getElementById(`rate`).value
+            hours = document.getElementById(`hours`).value
             var fullName = first + ` ` + last
             var grossPay = Number(rate * hours)
             var taxAmount = Number(grossPay * .20)
