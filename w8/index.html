@@ -36,15 +36,15 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		var fvalue = document.querySelector('first').value;
-		var lvalue = document.querySelector('last').value;
-		var button = document.querySelector('button').value;
+		var fvalue = document.getElementById('first')
+		var lvalue = document.getElementById('last')
+		var button = document.getElementById('button')
 
 		//Make an array to store the people
 		var people = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		document.querySelector('button').addEventListener('click', calcAndDisplay);
+		document.getElementById('button').addEventListener('click', calcAndDisplay);
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -63,14 +63,17 @@
 
 		function calcAndDisplay(e)
 		{
+			var outputinfo = document.querySelector('#output')
+			outputinfo.innerHTML = ``//create a blank slate for the outputinfo div
 			//Create an object called person.
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
 
-            var person = {
-				first: fvalue,
-				last: lvalue
+            var person =
+			{
+				first: fvalue.value,
+				last: lvalue.value
 
 
             }//end of person object
@@ -121,11 +124,10 @@
 
 			}//end of loop going through people array to edit 'output'
 
-				//log the output string
-				console.log(output)
-				//replace the outputDiv's inner HTML with the output string
-				var outputinfo = document.querySelector('#output')
-				outputinfo.innerHTML += output
+			//log the output string
+			console.log(output)
+			//replace the outputDiv's inner HTML with the output string
+			outputinfo.innerHTML += output
 
 
 
