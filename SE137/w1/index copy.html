@@ -88,28 +88,8 @@
     </div><!---END OF MAIN DIV-->
     <script>
         //JAVASCRIPT IN HERE
-        var a = Array.from(document.querySelectorAll(`a`));
-
-        for(let i=0; i<a.length; i++)
-        {
-            a[i].addEventListener(`click`, hide)
-        }
         
-        function hide(e)
-        {
-            e.preventDefault();
-
-            var div = document.querySelectorAll(`#main`)
-            
         
-            for(let i=0; i<div.length; i++)
-            {
-                
-                div[i].classList.add(`hide`);
-            }
-            div[a.indexOf(e.target)].classList.remove(`hide`);
-        }
-             
     </script>
     
 </body>
