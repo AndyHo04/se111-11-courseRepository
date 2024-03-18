@@ -94,7 +94,7 @@
         {
             a[i].addEventListener(`click`, hide)
         }
-        
+        div[a.indexOf(e.target)].classList.remove(`hide`);
         function hide(e)
         {
             e.preventDefault();
@@ -109,7 +109,7 @@
             }
             div[a.indexOf(e.target)].classList.remove(`hide`);
         }
-             
+            
     </script>
     
 </body>
