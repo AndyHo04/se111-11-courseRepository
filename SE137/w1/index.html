@@ -46,13 +46,14 @@
     <h1>Andy Ho</h1>
     <hr>
     <div id="nav">
-        <a href="#bio">BIO</a>
-        <a href="#education">EDUCATION</a>
-        <a href="#hobbies">HOBBIES</a>
+        <a href="#">BIO</a>
+        <a href="#">EDUCATION</a>
+        <a href="#">HOBBIES</a>
     </div>
     <hr>
     <div id = "main">
-        <div id ="bio">
+        <hr>
+        <div id ="bio" class ="content">
             <h2><strong>MY BIO</strong></h2>
             <img src="../w1/images/Vietnam-Flag.png" alt="Vietnam flag" width="500" height="250">
             <p><b>My name is Andy Ho and I am currently 19 years old. My family is from Vietnam but during the late 1990s they met and moved to The United States in Rhode Island where they had me in 2004. I was born in Woonsocket and I moved to Warwick during the summer of fourth grade. I am currently studying at New England Institute of Technology as a Software Enginner major. I have always been interested in computers and the thought of "engineering" as a computer so when I discovered Software engineering, I decided to take it as a major at NEIT since it looked interesting to me and the salary looked really good. </b></p>
@@ -60,7 +61,7 @@
             <hr>
         </div><!---END OF BIO DIV-->
         
-        <div id="education" class="hide">
+        <div id="education" class ="content hide">
             <h2><strong>SCHOOLING</strong></h2>
             <ul>
                <li><i><a href="https://holliman.warwickschools.org/" target = "_blank">Holliman Elementary School</a></i></li>
@@ -70,7 +71,7 @@
             <hr>
         </div><!---END OF EDUCATION DIV-->
          
-        <div id ="hobbies" class="hide">
+        <div id ="hobbies" class="content hide">
             <h2><strong>HOBBIES</strong></h2>
             <ol>
                 <li>Exercising</li>
@@ -88,28 +89,24 @@
     </div><!---END OF MAIN DIV-->
     <script>
         //JAVASCRIPT IN HERE
-        var a = Array.from(document.querySelectorAll(`a`));
-
+        var a = document.querySelectorAll("#nav a");
+        //or var a = Array.from(document.querySelectorAll(`a`));
         for(let i=0; i<a.length; i++)
         {
-            a[i].addEventListener(`click`, hide)
-        }
-        div[a.indexOf(e.target)].classList.remove(`hide`);
-        function hide(e)
-        {
-            e.preventDefault();
+            a[i].addEventListener(`click`, function(e){
+                e.preventDefault();
 
-            var div = document.querySelectorAll(`#main`)
-            
-        
-            for(let i=0; i<div.length; i++)
-            {
+                var div = document.querySelectorAll(`.content`);
+
+                for(let i=0; i<div.length; i++)
+                {
+                    div[i].classList.add(`hide`);
+                }
+
+                div[i].classList.remove(`hide`);
                 
-                div[i].classList.add(`hide`);
-            }
-            div[a.indexOf(e.target)].classList.remove(`hide`);
+            })
         }
-            
     </script>
     
 </body>
